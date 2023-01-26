@@ -6,6 +6,6 @@
 #   Where only the part of the name after the first dash is displayed (refer to the example)
 curr_content=$("ls")
 
-for i in $curr_content ; do
+for i in $curr_content; do
     echo "$i" | cut -d'-' -f2
 done
