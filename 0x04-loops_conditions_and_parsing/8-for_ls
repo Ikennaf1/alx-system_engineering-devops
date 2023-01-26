@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-# Displays:
-#
-#   The content of the current directory
-#   In a list format
-#   Where only the part of the name after the first dash is displayed (refer to the example)
+# Displays content of the current directory - only the parts after first dash
 curr_content=$("ls")
 
 for i in $curr_content; do
