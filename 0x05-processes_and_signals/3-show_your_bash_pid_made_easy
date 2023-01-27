@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays the PID, along with the process name
-pgrep bash -d' ' && echo "bash"
+echo -n "bash" | pgrep bash -d' '
