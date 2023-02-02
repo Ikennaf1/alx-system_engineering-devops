@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show attached IPs both IPv6 and IPv4
+
+ifconfig | grep "inet addr" | cut -d':' -f2 | cut -d' ' -f1
