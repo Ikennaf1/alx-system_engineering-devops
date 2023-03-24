@@ -1,6 +1,5 @@
 # Install a package using Puppet
 
-exec { 'install flask':
+exec { 'install python packages':
   command => 'pip3 install Flask==2.1.0'
-  path => ['/usr/bin/']
 }
