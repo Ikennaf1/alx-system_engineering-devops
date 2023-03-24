@@ -1,5 +1,6 @@
-# Install a package using Puppet
+# install flask 2.1.0 from pip3
 
-exec { 'install python packages':
-  command => 'pip3 install Flask==2.1.0'
+package { 'flask':
+  ensure   =>  '2.1.0',
+  provider =>  'pip3',
 }
