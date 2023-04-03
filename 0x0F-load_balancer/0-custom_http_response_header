@@ -23,13 +23,13 @@ config_file="/etc/nginx/nginx.conf"
 
 if ! sudo grep -q "add_header X-Served-By" $config_file;
 then
-    header_key="X-Served-By"
+    header_name="X-Served-By"
     header_value="\$hostname"
-    header="add_header $header_key $header_value;"
-    search="http {"
-    new_conf="$search\n\t$header"
+    header="add_header $header_name $header_value;"
+    search_phrase="http {"
+    new_conf="$search_phrase\n\t$header"
 
-    sudo sed -i "s|$search|$new_conf|" $config_file
+    sudo sed -i "s|$search_phrase|$new_conf|" $config_file
 
     sudo service nginx restart
 fi
