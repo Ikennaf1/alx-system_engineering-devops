@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Make fix short and sweet
+
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+pkill -1 nginx
