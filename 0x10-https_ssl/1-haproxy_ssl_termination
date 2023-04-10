@@ -1,1 +1,10 @@
 
+frontend localnodes
+    bind *:443 ssl crt /etc/ssl/www.trainerbay.tech/www.trainerbay.tech.pem
+
+    default_backend nodes
+
+backend nodes
+    balance roundrobin
+    server 144742-web-01 52.87.230.189:80 check
+    server 144742-web-02 18.234.80.136:80 check
