@@ -1,8 +1,10 @@
 
 frontend localnodes
     bind *:443 ssl crt /etc/ssl/www.trainerbay.tech/www.trainerbay.tech.pem
-
     default_backend nodes
+
+backend letsencrypt-backend
+    server letsencrypt 127.0.0.1:8888
 
 backend nodes
     balance roundrobin
