@@ -1,1 +1,9 @@
+#!/usr/bin/env bash
+# A Bash script that runs the "whoami" command
+# under the user passed as an argument
 
+given_user="$1"
+
+if [ "$given_user" ] ; then
+    chsh -s "$(which bash)" "$given_user" && su "$given_user" -c "whoami"
+fi
