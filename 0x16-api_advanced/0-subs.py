@@ -11,7 +11,7 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """Returns the total number of subscribers
+    """Returns the number of subscribers
     for a given subreddit.
     """
     # Set the Default URL strings
