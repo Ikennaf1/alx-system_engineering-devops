@@ -1,5 +1,5 @@
-# Fix an issue when Wordpress is
-# trying to initializes
+# Fix an issue and
+# automate with puppet
 
 exec { 'fix-wordpress':
   command => "/bin/sed -i /var/www/html/wp-settings.php \
