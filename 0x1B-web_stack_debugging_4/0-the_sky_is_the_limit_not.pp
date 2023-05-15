@@ -7,4 +7,4 @@ exec { 'fix--for-nginx':
 exec { 'restart nginx':
   command => '/usr/sbin/service nginx restart',
   require => Exec['fix--for-nginx']
-}
+
